@@ -24,7 +24,7 @@ class Checkout {
         } else {
             this.cart[itemId] = { quantity }
         }
-        console.log(this.cart)
+        // console.log(this.cart)
         return this.cart // to check the overall cart
 
     }
@@ -46,7 +46,7 @@ class Checkout {
             }
 
         })
-        console.log('arrayOfItems', arrayOfitems)
+        // console.log('arrayOfItems', arrayOfitems)
 
         let totalPrice = arrayOfitems.reduce((a, b) => a + b) // to get sum of items in an array
         let roundedOffTotalPrice = Math.round(totalPrice * 100) / 100 // to get 2 decimal places
