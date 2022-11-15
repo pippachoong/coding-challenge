@@ -57,18 +57,20 @@ class Checkout {
             const itemId = deals[deal].itemId // which item has deal
             this.deal[itemId] = deals[deal]  // add item with deal into object
         })
-        console.log('checkdeal', this.deal)
+        // console.log('checkdeal', this.deal)
     }
 
     addToCart(itemId, quantity) {
 
         if (this.cart[itemId]) {
-            this.updateCart(itemId, this.cart[itemId].quantity + quantity)
+            this.cart[itemId].quantity += quantity
+
         } else {
             this.cart[itemId] = { quantity }
         }
-
+        console.log(this.cart)
         return this.cart // to check the overall cart
+
     }
 
     totalPrice() {
@@ -109,7 +111,8 @@ def.addToCart("103", 1)
 console.log('default customer', def.totalPrice())
 
 const secondBite = new Checkout('002')
-secondBite.addToCart("101", 3)
+secondBite.addToCart("101", 2)
+secondBite.addToCart("101", 1)
 secondBite.addToCart("103", 1)
 console.log('SecondBite', secondBite.totalPrice())
 
