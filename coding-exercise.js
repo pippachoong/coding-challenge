@@ -27,5 +27,13 @@ myer.addToCart("102", 5)
 myer.addToCart("103", 1)
 console.log('myer', myer.totalPrice() === 1681.95)
 
+const jora = new Checkout('005')
+jora.addToCart("103", 5)
+// console.log('jora price', jora.totalPrice());
+console.log('jora', jora.totalPrice() === 1899.95)
 
+
+const myerExtension = new Checkout('004')
+myerExtension.addToCart("101", 4)
+console.log('myer', myerExtension.totalPrice() === 999.96)
 

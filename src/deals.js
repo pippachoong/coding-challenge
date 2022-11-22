@@ -32,6 +32,21 @@ const deals = {
         offer: 389.99
     },
 
+    "E": {
+        name: "4 and more Premium Ads",
+        itemId: "103",
+        minPurchase: 4,
+        offer: 379.99
+    },
+
+    "F": {
+        name: "classic ads 3 and more",
+        itemId: "101",
+        minPurchase: 3,
+        offer: 249.99
+    }
+
+
 }
 
 module.exports = deals
